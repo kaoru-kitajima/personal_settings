@@ -1,0 +1,17 @@
+[Unit]
+Description=xkeysnail
+# After=display-manager.service
+
+[Service]
+KillMode=process
+ExecStartPre=/usr/bin/xhost +SI:localuser:root
+ExecStart=/usr/local/bin/xkeysnail ${HOME}/.config/xkeysnail/config.py
+Type=simple
+Restart=always
+RestartSec=10s
+
+# たぶん :0 で問題ないと思いますが環境にもよります。`echo $DISPLAY`の値を設定してください
+# Environment=DISPLAY=:1
+
+[Install]
+WantedBy=default.target
