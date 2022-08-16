@@ -20,3 +20,12 @@ sc079 & l::Send, {Blind}{right}
 ;変換＋←→でBrowse_Back Browse_Forward
 sc079 & left::send, {blind}{Browser_Back}
 sc079 & right::send, {blind}{Browser_Forward}
+;変換+;でBackSpace
+sc079 & `;::send, {blind}{BS}
+
+;google日本語で以下を
+;キー設定でkeymap.txtをインポート
+;ローマ字設定でromantable.txtをインポート
+
+;このファイルの拡張子を.ahkに変える。
+;PC起動時に自動起動したいので、win+Rでshell:startupを入力→.ahkファイルへのショートカットファイルを置く。
