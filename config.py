@@ -17,15 +17,18 @@ define_keymap(None, {
     K("RSuper-comma"): K("Down"),
     K("RSuper-k"): K("Up"),
     K("RSuper-l"): K("Right"),
+    K("RSuper-Semicolon"): K("BackSpace"),
     
     K("Shift-RSuper-j"): K("Shift-Left"),
     K("Shift-RSuper-comma"): K("Shift-Down"),
     K("Shift-RSuper-k"): K("Shift-Up"),
     K("Shift-RSuper-l"): K("Shift-Right"),
+    K("Shift-RSuper-Semicolon"): K("Shift-BackSpace"),
     K("C-RSuper-j"): K("C-Left"),
     K("C-RSuper-comma"): K("C-Down"),
     K("C-RSuper-k"): K("C-Up"),
     K("C-RSuper-l"): K("C-Right"),
+    K("C-RSuper-Semicolon"): K("C-BackSpace"),
     
     K("RM-j"): K("Home"),
     K("RM-l"): K("End"),
