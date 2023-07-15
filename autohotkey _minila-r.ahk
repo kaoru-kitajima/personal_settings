@@ -12,7 +12,8 @@ sc07B & s::send, {Blind}{left}
 sc07B & d::send, {Blind}{down}
 sc07B & e::send, {Blind}{up}
 sc07B & f::send, {Blind}{right}
-sc07B & vkF0::send, {blind}{esc}
+;–³•ÏŠ·{CapsLock‚ÅEsc
+sc07B & CapsLock::send, {esc}
 
 ;•ÏŠ·+jmk,l.;
 sc079 & j::Send, {insert}
