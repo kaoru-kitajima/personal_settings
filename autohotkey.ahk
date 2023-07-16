@@ -1,31 +1,33 @@
-;https://freelifetech.com/make-comfortable-keybind-by-autohotkey-muhenkankey/@‚ðŽQl‚ÉB
+;https://freelifetech.com/make-comfortable-keybind-by-autohotkey-muhenkankey/ï¿½@ï¿½ï¿½ï¿½Qï¿½lï¿½ÉB
 
-;•ÏŠ·–³•ÏŠ·‚Í‚»‚Ì‚Ü‚Ü’Ê‚·BIMEØ‚è‘Ö‚¦‚Ígoogle“ú–{Œê‚Ås‚¤‚Ù‚¤‚ª‚â‚è‚â‚·‚¢B
+;ï¿½ÏŠï¿½ï¿½ï¿½ï¿½ÏŠï¿½ï¿½Í‚ï¿½ï¿½Ì‚Ü‚Ü’Ê‚ï¿½ï¿½BIMEï¿½Ø‚ï¿½Ö‚ï¿½ï¿½ï¿½googleï¿½ï¿½ï¿½{ï¿½ï¿½Åsï¿½ï¿½ï¿½Ù‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â‚·ï¿½ï¿½ï¿½B
 sc079::send, {sc079}
 sc07B::send, {sc07B}
-;‚ÆŽv‚Á‚½‚¯‚Ç‰º‚ÌƒVƒ‡[ƒgƒJƒbƒgŽg‚¤‚Ì‚ÉŠÔˆá‚Á‚Ä’P“Æ‰Ÿ‚µ‚µ‚ÄIMEØ‚è‘Ö‚¦‚¿‚á‚¤‚±‚Æ‚ª‚ ‚é‚©‚ç—¼‰Ÿ‚µ‚Å”¼Šp‘SŠp‚ðØ‚è‘Ö‚¦‚é‚æ‚¤‚É‚·‚éB
+;ï¿½ÆŽvï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç‰ï¿½ï¿½ÌƒVï¿½ï¿½ï¿½[ï¿½gï¿½Jï¿½bï¿½gï¿½gï¿½ï¿½ï¿½Ì‚ÉŠÔˆï¿½ï¿½ï¿½Ä’Pï¿½Æ‰ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½IMEï¿½Ø‚ï¿½Ö‚ï¿½ï¿½ï¿½ï¿½á‚¤ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½ï¿½é‚©ï¿½ç—¼ï¿½ï¿½ï¿½ï¿½ï¿½Å”ï¿½ï¿½pï¿½Sï¿½pï¿½ï¿½Ø‚ï¿½Ö‚ï¿½ï¿½ï¿½æ‚¤ï¿½É‚ï¿½ï¿½ï¿½B
 sc079 & sc07B::Send, {vkF3sc029}
 sc07B & sc079::Send, {vkF3sc029}
 
-;–³•ÏŠ·{JL‚ÅHOME END
+;ï¿½ï¿½ï¿½ÏŠï¿½ï¿½{JLï¿½ï¿½HOME END
 sc07B & j::send, {blind}{home}
 sc07B & l::send, {blind}{end}
+;ï¿½ï¿½ï¿½ÏŠï¿½ï¿½{CapsLockï¿½ï¿½Esc
+sc07B & sc03A::send, {esc}
 
-;•ÏŠ·+HJKL‚Å©«ª¨‚É‚·‚éB(google“ú–{Œê‚Ìz+h©‚Æ“¯—lj Blind‚ð‚Â‚¯‚é‚ÆCüƒL[‘g‚Ý‡‚í‚¹iShiftACtr‚È‚Çj‚à‰Â”\
+;ï¿½ÏŠï¿½+HJKLï¿½Åï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½B(googleï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½z+hï¿½ï¿½ï¿½ï¿½ï¿½Æ“ï¿½ï¿½lï¿½j Blindï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½ÆCï¿½ï¿½ï¿½Lï¿½[ï¿½gï¿½Ýï¿½ï¿½í‚¹ï¿½iShiftï¿½ACtrï¿½È‚Çjï¿½ï¿½ï¿½Â”\
 sc079 & j::Send, {Blind}{left}
 sc079 & ,::Send, {Blind}{down}
 sc079 & k::Send, {Blind}{up}
 sc079 & l::Send, {Blind}{right}
 
-;•ÏŠ·{©¨‚ÅBrowse_Back Browse_Forward
+;ï¿½ÏŠï¿½ï¿½{ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Browse_Back Browse_Forward
 sc079 & left::send, {blind}{Browser_Back}
 sc079 & right::send, {blind}{Browser_Forward}
-;•ÏŠ·+;‚ÅBackSpace
+;ï¿½ÏŠï¿½+;ï¿½ï¿½BackSpace
 sc079 & `;::send, {blind}{BS}
 
-;google“ú–{Œê‚ÅˆÈ‰º‚ð
-;ƒL[Ý’è‚Åkeymap.txt‚ðƒCƒ“ƒ|[ƒg
-;ƒ[ƒ}ŽšÝ’è‚Åromantable.txt‚ðƒCƒ“ƒ|[ƒg
+;googleï¿½ï¿½ï¿½{ï¿½ï¿½ÅˆÈ‰ï¿½ï¿½ï¿½
+;ï¿½Lï¿½[ï¿½Ý’ï¿½ï¿½keymap.txtï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½|ï¿½[ï¿½g
+;ï¿½ï¿½ï¿½[ï¿½}ï¿½ï¿½ï¿½Ý’ï¿½ï¿½romantable.txtï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½|ï¿½[ï¿½g
 
-;‚±‚Ìƒtƒ@ƒCƒ‹‚ÌŠg’£Žq‚ð.ahk‚É•Ï‚¦‚éB
-;PC‹N“®Žž‚ÉŽ©“®‹N“®‚µ‚½‚¢‚Ì‚ÅAwin+R‚Åshell:startup‚ð“ü—Í¨.ahkƒtƒ@ƒCƒ‹‚Ö‚ÌƒVƒ‡[ƒgƒJƒbƒgƒtƒ@ƒCƒ‹‚ð’u‚­B
+;ï¿½ï¿½ï¿½Ìƒtï¿½@ï¿½Cï¿½ï¿½ï¿½ÌŠgï¿½ï¿½ï¿½qï¿½ï¿½.ahkï¿½É•Ï‚ï¿½ï¿½ï¿½B
+;PCï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ÉŽï¿½ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚ÅAwin+Rï¿½ï¿½shell:startupï¿½ï¿½ï¿½ï¿½Íï¿½.ahkï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½Ö‚ÌƒVï¿½ï¿½ï¿½[ï¿½gï¿½Jï¿½bï¿½gï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½ï¿½uï¿½ï¿½ï¿½B
