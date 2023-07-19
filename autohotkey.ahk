@@ -1,33 +1,37 @@
-;https://freelifetech.com/make-comfortable-keybind-by-autohotkey-muhenkankey/�@���Q�l�ɁB
+;https://freelifetech.com/make-comfortable-keybind-by-autohotkey-muhenkankey/　を参考に。
 
-;�ϊ����ϊ��͂��̂܂ܒʂ��BIME�؂�ւ���google���{��ōs���ق������₷���B
+;変換無変換はそのまま通す。IME切り替えはgoogle日本語で行うほうがやりやすい。
 sc079::send, {sc079}
 sc07B::send, {sc07B}
-;�Ǝv�������ǉ��̃V���[�g�J�b�g�g���̂ɊԈ���ĒP�Ɖ�������IME�؂�ւ����Ⴄ���Ƃ����邩�痼�����Ŕ��p�S�p��؂�ւ���悤�ɂ���B
+;と思ったけど下のショートカット使うのに間違って単独押ししてIME切り替えちゃうことがあるから両押しで半角全角を切り替えるようにする。
 sc079 & sc07B::Send, {vkF3sc029}
 sc07B & sc079::Send, {vkF3sc029}
 
-;���ϊ��{JL��HOME END
+;無変換＋JLでHOME END
+;Blindを加えることでShift,Ctrlによる修飾にも対応する。
 sc07B & j::send, {blind}{home}
 sc07B & l::send, {blind}{end}
-;���ϊ��{CapsLock��Esc
+;無変換＋CapsLockでEsc
 sc07B & sc03A::send, {esc}
 
-;�ϊ�+HJKL�Ł��������ɂ���B(google���{���z+h�����Ɠ��l�j Blind������ƏC���L�[�g�ݍ��킹�iShift�ACtr�Ȃǁj���\
+;変換+J,KLで←↓↑→(google日本語で全角入力でz+J,KLで矢印キーになるのと揃えている)。
 sc079 & j::Send, {Blind}{left}
 sc079 & ,::Send, {Blind}{down}
 sc079 & k::Send, {Blind}{up}
 sc079 & l::Send, {Blind}{right}
 
-;�ϊ��{������Browse_Back Browse_Forward
+;変換+mでDel
+sc079 & m::Send, {Blind}{Delete}
+
+;変換＋Browse_Back Browse_Forward
 sc079 & left::send, {blind}{Browser_Back}
 sc079 & right::send, {blind}{Browser_Forward}
-;�ϊ�+;��BackSpace
+;変換+;でBackSpace
 sc079 & `;::send, {blind}{BS}
 
-;google���{��ňȉ���
-;�L�[�ݒ��keymap.txt���C���|�[�g
-;���[�}���ݒ��romantable.txt���C���|�[�g
+;google日本語で以下を設定する。
+;キー設定でkeymap.txtをインポート
+;ローマ字設定でromantable.txtをインポート
 
-;���̃t�@�C���̊g���q��.ahk�ɕς���B
-;PC�N�����Ɏ����N���������̂ŁAwin+R��shell:startup����́�.ahk�t�@�C���ւ̃V���[�g�J�b�g�t�@�C����u���B
+;このファイルの拡張子を.ahkに変える。
+;PC起動時に自動起動したいので、win+Rでshell:startupを入力→.ahkファイルへのショートカットファイルを置く。

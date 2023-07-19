@@ -1,21 +1,21 @@
-;https://freelifetech.com/make-comfortable-keybind-by-autohotkey-muhenkankey/@‚ğQl‚ÉB
+;https://freelifetech.com/make-comfortable-keybind-by-autohotkey-muhenkankey/ã€€ã‚’å‚è€ƒã«ã€‚
 
-;•ÏŠ·–³•ÏŠ·‚Í‚»‚Ì‚Ü‚Ü’Ê‚·BIMEØ‚è‘Ö‚¦‚Ígoogle“ú–{Œê‚Ås‚¤‚Ù‚¤‚ª‚â‚è‚â‚·‚¢B
+;å¤‰æ›ç„¡å¤‰æ›ã¯ãã®ã¾ã¾é€šã™ã€‚IMEåˆ‡ã‚Šæ›¿ãˆã¯googleæ—¥æœ¬èªã§è¡Œã†ã»ã†ãŒã‚„ã‚Šã‚„ã™ã„ã€‚
 sc079::send, {sc079}
 sc07B::send, {sc07B}
-;‚Æv‚Á‚½‚¯‚Ç‰º‚ÌƒVƒ‡[ƒgƒJƒbƒgg‚¤‚Ì‚ÉŠÔˆá‚Á‚Ä’P“Æ‰Ÿ‚µ‚µ‚ÄIMEØ‚è‘Ö‚¦‚¿‚á‚¤‚±‚Æ‚ª‚ ‚é‚©‚ç—¼‰Ÿ‚µ‚Å”¼Šp‘SŠp‚ğØ‚è‘Ö‚¦‚é‚æ‚¤‚É‚·‚éB
+;ã¨æ€ã£ãŸã‘ã©ä¸‹ã®ã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆä½¿ã†ã®ã«é–“é•ã£ã¦å˜ç‹¬æŠ¼ã—ã—ã¦IMEåˆ‡ã‚Šæ›¿ãˆã¡ã‚ƒã†ã“ã¨ãŒã‚ã‚‹ã‹ã‚‰ä¸¡æŠ¼ã—ã§åŠè§’å…¨è§’ã‚’åˆ‡ã‚Šæ›¿ãˆã‚‹ã‚ˆã†ã«ã™ã‚‹ã€‚
 sc079 & sc07B::Send, {vkF3sc029}
 sc07B & sc079::Send, {vkF3sc029}
 
-;–³•ÏŠ·{SDEF‚Å©«ª¨
+;ç„¡å¤‰æ›ï¼‹SDEFã§â†â†“â†‘â†’
 sc07B & s::send, {Blind}{left}
 sc07B & d::send, {Blind}{down}
 sc07B & e::send, {Blind}{up}
 sc07B & f::send, {Blind}{right}
-;–³•ÏŠ·{CapsLock‚ÅEsc
+;ç„¡å¤‰æ›ï¼‹CapsLockã§Esc
 sc07B & CapsLock::send, {esc}
 
-;•ÏŠ·+jmk,l.;
+;å¤‰æ›+jmk,l.;
 sc079 & j::Send, {insert}
 sc079 & m::Send, {Blind}{del}
 sc079 & k::Send, {Blind}{home}
@@ -24,13 +24,13 @@ sc079 & l::Send, {Blind}{PgUp}
 sc079 & .::Send, {Blind}{PgDn}
 sc079 & `;::send, {blind}{BS}
 
-;•ÏŠ·{©¨‚ÅBrowse_Back Browse_Forward
+;å¤‰æ›ï¼‹â†â†’ã§Browse_Back Browse_Forward
 sc079 & left::send, {blind}{Browser_Back}
 sc079 & right::send, {blind}{Browser_Forward}
 
-;google“ú–{Œê‚ÅˆÈ‰º‚ğ
-;ƒL[İ’è‚Åkeymap.txt‚ğƒCƒ“ƒ|[ƒg
-;ƒ[ƒ}šİ’è‚Åromantable.txt‚ğƒCƒ“ƒ|[ƒg
+;googleæ—¥æœ¬èªã§ä»¥ä¸‹ã‚’è¨­å®šã€‚
+;ã‚­ãƒ¼è¨­å®šã§keymap.txtã‚’ã‚¤ãƒ³ãƒãƒ¼ãƒˆ
+;ãƒ­ãƒ¼ãƒå­—è¨­å®šã§romantable.txtã‚’ã‚¤ãƒ³ãƒãƒ¼ãƒˆ
 
-;‚±‚Ìƒtƒ@ƒCƒ‹‚ÌŠg’£q‚ğ.ahk‚É•Ï‚¦‚éB
-;PC‹N“®‚É©“®‹N“®‚µ‚½‚¢‚Ì‚ÅAwin+R‚Åshell:startup‚ğ“ü—Í¨.ahkƒtƒ@ƒCƒ‹‚Ö‚ÌƒVƒ‡[ƒgƒJƒbƒgƒtƒ@ƒCƒ‹‚ğ’u‚­B
+;ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã®æ‹¡å¼µå­ã‚’.ahkã«å¤‰ãˆã‚‹ã€‚
+;PCèµ·å‹•æ™‚ã«è‡ªå‹•èµ·å‹•ã—ãŸã„ã®ã§ã€win+Rã§shell:startupã‚’å…¥åŠ›â†’.ahkãƒ•ã‚¡ã‚¤ãƒ«ã¸ã®ã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç½®ãã€‚
