@@ -15,10 +15,15 @@ sc07B & l::send, {blind}{end}
 sc07B & sc03A::send, {esc}
 
 ;変換+J,KLで←↓↑→(google日本語で全角入力でz+J,KLで矢印キーになるのと揃えている)。
-sc079 & j::Send, {Blind}{left}
+sc079 & j::Send, {Blind}{left}	
 sc079 & ,::Send, {Blind}{down}
 sc079 & k::Send, {Blind}{up}
 sc079 & l::Send, {Blind}{right}
+
+#IFfWinActive, ahk_class Framework::CFrame
+    ^k::dlcall("keybd_event", int, 0x26, int, 0, int, 1, int, 0)
+    ^,::dlcall("keybd_event", int, 0x28, int, 0, int, 1, int, 0)
+#IfWinActive
 
 ;変換+mでDel
 sc079 & m::Send, {Blind}{Delete}
