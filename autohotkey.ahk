@@ -20,9 +20,9 @@ sc079 & ,::Send, {Blind}{down}
 sc079 & k::Send, {Blind}{up}
 sc079 & l::Send, {Blind}{right}
 
-#IFfWinActive, ahk_class Framework::CFrame
-    ^k::dlcall("keybd_event", int, 0x26, int, 0, int, 1, int, 0)
-    ^,::dlcall("keybd_event", int, 0x28, int, 0, int, 1, int, 0)
+#IfWinActive, ahk_class Framework::CFrame
+    sc079 & k::dllcall("keybd_event", int, 0x26, int, 0, int, 1, int, 0)
+    sc079 & ,::dllcall("keybd_event", int, 0x28, int, 0, int, 1, int, 0)
 #IfWinActive
 
 ;変換+mでDel
