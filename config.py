@@ -86,6 +86,17 @@ define_keymap(None, {
     K("RSuper-x"): K("x"),
     K("RSuper-y"): K("y"),
     K("RSuper-z"): K("z"),
+    
+    K("RSuper-KEY_1"): K("KEY_1"),
+    K("RSuper-KEY_2"): K("KEY_2"),
+    K("RSuper-KEY_3"): K("KEY_3"),
+    K("RSuper-KEY_4"): K("KEY_4"),
+    K("RSuper-KEY_5"): K("KEY_5"),
+    K("RSuper-KEY_6"): K("KEY_6"),
+    K("RSuper-KEY_7"): K("KEY_7"),
+    K("RSuper-KEY_8"): K("KEY_8"),
+    K("RSuper-KEY_9"): K("KEY_9"),
+    K("RSuper-KEY_0"): K("KEY_0"),
 
     K("RSuper-Left"): K("M-Left"),
     K("RSuper-Right"): K("M-Right"),
