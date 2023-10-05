@@ -30,6 +30,10 @@ define_keymap(None, {
     K("C-RSuper-k"): K("C-Up"),
     K("C-RSuper-l"): K("C-Right"),
     K("C-RSuper-Semicolon"): K("C-BackSpace"),
+    K("C-Shift-RSuper-j"): K("C-Shift-Left"),
+    K("C-Shift-RSuper-comma"): K("C-Shift-Down"),
+    K("C-Shift-RSuper-k"): K("C-Shift-Up"),
+    K("C-Shift-RSuper-l"): K("C-Shift-Right"),
     
     K("RM-j"): K("Home"),
     K("RM-l"): K("End"),
