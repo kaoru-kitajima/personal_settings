@@ -67,6 +67,7 @@ define_keymap(None, {
     K("RM-y"): K("y"),
     K("RM-z"): K("z"),
     K("RM-comma"): K("comma"),
+    K("RM-space"): K("space"),
     
     K("RSuper-a"): K("a"),
     K("RSuper-b"): K("b"),
@@ -90,6 +91,8 @@ define_keymap(None, {
     K("RSuper-x"): K("x"),
     K("RSuper-y"): K("y"),
     K("RSuper-z"): K("z"),
+    K("RSuper-comma"): K("comma"),
+    K("RSuper-space"): K("space"),
     
     K("RSuper-KEY_1"): K("KEY_1"),
     K("RSuper-KEY_2"): K("KEY_2"),
