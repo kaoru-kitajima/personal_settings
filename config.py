@@ -14,24 +14,24 @@ define_multipurpose_modmap({
 define_keymap(None, {
     # HENKAN->RSuper, MUHENKAN->RM
     K("RSuper-j"): K("Left"),
-    K("RSuper-comma"): K("Down"),
+    K("RSuper-COMMA"): K("Down"),
     K("RSuper-k"): K("Up"),
     K("RSuper-l"): K("Right"),
     K("RSuper-Semicolon"): K("BackSpace"),
     K("RSuper-m"): K("Delete"),
     
     K("Shift-RSuper-j"): K("Shift-Left"),
-    K("Shift-RSuper-comma"): K("Shift-Down"),
+    K("Shift-RSuper-COMMA"): K("Shift-Down"),
     K("Shift-RSuper-k"): K("Shift-Up"),
     K("Shift-RSuper-l"): K("Shift-Right"),
     K("Shift-RSuper-Semicolon"): K("Shift-BackSpace"),
     K("C-RSuper-j"): K("C-Left"),
-    K("C-RSuper-comma"): K("C-Down"),
+    K("C-RSuper-COMMA"): K("C-Down"),
     K("C-RSuper-k"): K("C-Up"),
     K("C-RSuper-l"): K("C-Right"),
     K("C-RSuper-Semicolon"): K("C-BackSpace"),
     K("C-Shift-RSuper-j"): K("C-Shift-Left"),
-    K("C-Shift-RSuper-comma"): K("C-Shift-Down"),
+    K("C-Shift-RSuper-COMMA"): K("C-Shift-Down"),
     K("C-Shift-RSuper-k"): K("C-Shift-Up"),
     K("C-Shift-RSuper-l"): K("C-Shift-Right"),
     
@@ -66,7 +66,7 @@ define_keymap(None, {
     K("RM-x"): K("x"),
     K("RM-y"): K("y"),
     K("RM-z"): K("z"),
-    K("RM-comma"): K("comma"),
+    K("RM-COMMA"): K("COMMA"),
     K("RM-space"): K("space"),
     K("RM-tab"): K("tab"),
     
@@ -92,7 +92,6 @@ define_keymap(None, {
     K("RSuper-x"): K("x"),
     K("RSuper-y"): K("y"),
     K("RSuper-z"): K("z"),
-    K("RSuper-comma"): K("comma"),
     K("RSuper-space"): K("space"),
     K("RSuper-tab"): K("tab"),
     
