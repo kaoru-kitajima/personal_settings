@@ -20,12 +20,17 @@ pip install xkeysnail
 cp personal_settings/config.py ~/.config/xkeysnail/
 cp personal_settings/xkeysnail.service ~/.config/systemd/user/
 ```
+evdev 1.9.0でfn属性が廃止されたことの対応
+1. ~/.config/xkeysnail/venv/lib/python3.12/site-packages/xkeysnail/input.pyを開く。
+1. 36行目の1.fnを1.pathに変更
+1. 57行目と95行目と160行目のdevice.fnをdevice.pathに変更
 xkeysnailのService設定（自動起動）
-1. ユーザーグループ作成：`getent group uinput`  
+1. ユーザーグループにuinputが存在するか確認：`getent group uinput`  
+1. 何も出力がなければ存在しないので、ユーザーグループ作成：`sudo groupadd uinput`  
 1. 権限付与：`sudo usermod -aG input,uinput ${USER}`  
 1. /etc/udev/rules.d/70-input.rulesを作成
     >KERNEL=="event*", NAME="input/%k", MODE="660", GROUP="input"  
-1. etc/udev/rules.d/70-uinput.rulesを作成
+1. /etc/udev/rules.d/70-uinput.rulesを作成
     >KERNEL=="uinput", GROUP="uinput"  
 1. PCを再起動
 1. xkeysnail.serviceを~/.config/systemd/user/xkeysnail.serviceに配置
