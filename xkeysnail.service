@@ -5,6 +5,9 @@ Description=xkeysnail
 [Service]
 KillMode=process
 ExecStartPre=/usr/bin/xhost +SI:localuser:root
+# until Ubuntu22.04
+# ExecStart=%h/.config/xkeysnail/venv/bin/xkeysnail %h/.config/xkeysnail/config.py
+# from Ubuntu24.04
 ExecStart=%h/.config/xkeysnail/venv/bin/xkeysnail %h/.config/xkeysnail/config.py
 Type=simple
 Restart=always
