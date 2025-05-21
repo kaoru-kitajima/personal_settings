@@ -77,7 +77,8 @@ google日本語で
 - キー設定でkeymap.txtをインポート  
 - ローマ字設定でromantable.txtをインポート  
 
-autohotkeyをインストール  
+autohotkey(v1/v2)をインストール  
+v2の場合は{ファイル名}_v2.ahkを用いる。  
 PC起動時に自動起動したいので、win+Rでshell:startupを入力→.ahkファイルへのショートカットファイルを置く。  
 
 # Windows 11
