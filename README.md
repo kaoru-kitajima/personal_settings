@@ -4,39 +4,51 @@ personal settings of windows and linux.
 # Ubuntu 24.04
 Ubuntu 22.04からアップグレード。
 
-PEP668に応じてpipがシステムワイドにパッケージをインストールすることができなくなったため、venvで仮想環境を作成するように変更。
-
 githubからのクローン
 ```bash
 mkdir ~/Software && cd ~/Software
 git clone https://github.com/kaoru-kitajima/personal_settings.git
 ```
-xkeysnail用のpython環境設定
+Kanata への移行
 ```bash
-mkdir ~/.config/xkeysnail
-python3 -m venv venv
-source venv/bin/activate
-pip install xkeysnail
-cp personal_settings/config.py ~/.config/xkeysnail/
-cp personal_settings/xkeysnail.service ~/.config/systemd/user/
+mkdir -p ~/.config/kanata ~/.config/systemd/user
+cp personal_settings/kanata.kbd ~/.config/kanata/
+cp personal_settings/kanata.service ~/.config/systemd/user/
 ```
-evdev 1.9.0でfn属性が廃止されたことの対応
-1. ~/.config/xkeysnail/venv/lib/python3.12/site-packages/xkeysnail/input.pyを開く。
-1. 36行目の1.fnを1.pathに変更
-1. 57行目と95行目と160行目のdevice.fnをdevice.pathに変更
-xkeysnailのService設定（自動起動）
-1. ユーザーグループにuinputが存在するか確認：`getent group uinput`  
-1. 何も出力がなければ存在しないので、ユーザーグループ作成：`sudo groupadd uinput`  
+Kanata のインストール手順
+```bash
+# github の公式 release から linux-binaries-x64zip をダウンロード
+cd ~/Downloads
+unzip linux-binaries-x64.zip
+chmod +x kanata_linux_x64
+sudo install -m 0755 kanata_linux_x64 /usr/local/bin/kanata
+```
+Kanata の Service 設定（自動起動）
+1. ユーザーグループ作成：`getent group uinput`  
 1. 権限付与：`sudo usermod -aG input,uinput ${USER}`  
 1. /etc/udev/rules.d/70-input.rulesを作成
     >KERNEL=="event*", NAME="input/%k", MODE="660", GROUP="input"  
 1. /etc/udev/rules.d/70-uinput.rulesを作成
     >KERNEL=="uinput", GROUP="uinput"  
 1. PCを再起動
-1. xkeysnail.serviceを~/.config/systemd/user/xkeysnail.serviceに配置
-1. サービスとして登録：`systemctl --user enable xkeysnail`
-1. 起動：`systemctl --user start xkeysnail`
-1. 動作確認：`systemctl --user status xkeysnail`
+1. kanata.serviceを~/.config/systemd/user/kanata.serviceに配置
+1. ユーザー設定の再読込：`systemctl --user daemon-reload`
+1. サービスとして登録：`systemctl --user enable kanata`
+1. 起動：`systemctl --user start kanata`
+1. 動作確認：`systemctl --user status kanata`
+
+現在の kanata.kbd は、xkeysnail の config.py を基に次の挙動を移植している。
+- 変換ホールド: 矢印、BackSpace、Delete、Browser Back/Forward
+- 無変換ホールド: Home、End、Esc
+- 変換+無変換、無変換+変換: Grave
+
+補足
+- Kanata は xkeysnail と違い、Python 仮想環境を不要にできる。
+- Kanata は xkeysnail と違い、ALT, SUPERのキーを使わないため、ブラウザなどに不要な動作を引き起こさない。
+- リモートデスクトップ経由の入力取得は、xkeysnail と同様に方式上の制約が残る。
+- OS 起動後に接続したキーボードの追従性は実機で確認した。
+
+xkeysnail は移行元として config.py と xkeysnail.service を残している。
 
 # Ubuntu 22.04
 Ubuntu 20.04からアップグレード。  

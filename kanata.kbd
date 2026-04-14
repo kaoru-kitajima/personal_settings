@@ -1,0 +1,60 @@
+;; Kanata config migrated from xkeysnail.
+
+(deflocalkeys-linux
+  scln 39
+  apos 40
+  comm 51
+  dot 52
+  grtr 52
+  slsh 53
+)
+
+(defcfg
+  process-unmapped-keys yes
+  linux-device-detect-mode keyboard-only
+  linux-continue-if-no-devs-found yes
+)
+
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    scln apos ret
+  lsft z    x    c    v    b    n    m    comm grtr slsh rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+  left down up   rght
+  henk mhnk
+)
+
+(defalias
+  henk-mod (tap-hold-press 0 175 XX (layer-while-held henk-layer))
+  mhnk-mod (tap-hold-press 0 175 XX (layer-while-held mhnk-layer))
+)
+
+(deflayermap (base)
+  henk @henk-mod
+  mhnk @mhnk-mod
+  _ use-defsrc
+)
+
+(deflayermap (henk-layer)
+  henk @henk-mod
+  mhnk grv
+  j left
+  comm down
+  k up
+  l rght
+  scln bspc
+  m del
+  left bck
+  rght fwd
+  _ use-defsrc
+)
+
+(deflayermap (mhnk-layer)
+  henk grv
+  mhnk @mhnk-mod
+  j home
+  l end
+  caps esc
+  _ use-defsrc
+)
