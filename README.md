@@ -26,17 +26,18 @@ sudo install -m 0755 kanata_linux_x64 /usr/local/bin/kanata
 ```
 Kanata の Service 設定（自動起動）
 1. ユーザーグループ作成：`getent group uinput`  
-1. 権限付与：`sudo usermod -aG input,uinput ${USER}`  
-1. /etc/udev/rules.d/70-input.rulesを作成
+2. 権限付与：`sudo usermod -aG input,uinput ${USER}`  
+3. /etc/udev/rules.d/70-input.rulesを作成
     >KERNEL=="event*", NAME="input/%k", MODE="660", GROUP="input"  
-1. /etc/udev/rules.d/70-uinput.rulesを作成
+4. /etc/udev/rules.d/70-uinput.rulesを作成
     >KERNEL=="uinput", GROUP="uinput"  
-1. PCを再起動
-1. kanata.serviceを~/.config/systemd/user/kanata.serviceに配置
-1. ユーザー設定の再読込：`systemctl --user daemon-reload`
-1. サービスとして登録：`systemctl --user enable kanata`
-1. 起動：`systemctl --user start kanata`
-1. 動作確認：`systemctl --user status kanata`
+5. PCを再起動
+6. kanata.kbdを~/.config/kanata/kanata.kbdに配置（kanataへの移行で実行済み）
+7. kanata.serviceを~/.config/systemd/user/kanata.serviceに配置（kanataへの移行で実行済み）
+8. ユーザー設定の再読込：`systemctl --user daemon-reload`
+9. サービスとして登録：`systemctl --user enable kanata`
+10. 起動：`systemctl --user start kanata`
+11. 動作確認：`systemctl --user status kanata`
 
 現在の kanata.kbd は、xkeysnail の config.py を基に次の挙動を移植している。
 - 変換ホールド: 矢印、BackSpace、Delete、Browser Back/Forward
@@ -75,15 +76,15 @@ https://github.com/mooz/xkeysnail
 を参考にサービス化とfirefoxの設定まで達成。  
 > xkeysnailはrootで実行する必要がありますが、どっちみち先程のxhostコマンドは一般ユーザーで実行する必要があるので、一般ユーザーで起動するようにしたほうがラクです。というわけで一般ユーザーに必要な権限だけ与えて、user環境のsystemdに登録することにします。
 1. ユーザーグループ作成：`getent group uinput`  
-1. 権限付与：`sudo usermod -aG input,uinput あなたのユーザー名`  
-1. /etc/udev/rules.d/70-input.rulesを作成
+2. 権限付与：`sudo usermod -aG input,uinput あなたのユーザー名`  
+3. /etc/udev/rules.d/70-input.rulesを作成
     >KERNEL=="event*", NAME="input/%k", MODE="660", GROUP="input"  
-1. etc/udev/rules.d/70-uinput.rulesを作成
+4. etc/udev/rules.d/70-uinput.rulesを作成
     >KERNEL=="uinput", GROUP="uinput"  
-1. 再起動
-1. xkeysnail.serviceを~/.config/systemd/user/xkeysnail.serviceに配置
-1. サービスとして登録：`systemctl --user enable xkeysnail`
-1. 起動：`systemctl --user start xkeysnail`
+5. 再起動
+6. xkeysnail.serviceを~/.config/systemd/user/xkeysnail.serviceに配置
+7. サービスとして登録：`systemctl --user enable xkeysnail`
+8. 起動：`systemctl --user start xkeysnail`
 
 vscodeもaltキーでmenubarにfocusしてしまうのでユーザー設定から"window.titleBarStyle": "custom", "window.customMenuBarAltFocus": falseにする。githubアカウントでOSごとに設定を共有できるのでログインすれば設定済みのはず。  
 https://stackoverflow.com/questions/69869371/how-to-disable-alt-key-to-focus-on-file-tab-in-vs-code  
