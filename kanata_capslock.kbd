@@ -1,0 +1,52 @@
+;; Kanata config
+
+(deflocalkeys-linux
+  scln 39
+  apos 40
+  comm 51
+  dot 52
+  grtr 52
+  slsh 53
+)
+
+(defcfg
+  process-unmapped-keys yes
+  linux-device-detect-mode keyboard-only
+  linux-continue-if-no-devs-found yes
+)
+
+;; nothing changed
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    scln apos ret
+  lsft z    x    c    v    b    n    m    comm grtr slsh rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+  left down up   rght
+  henk mhnk
+)
+
+(defalias
+  caps-mod (tap-hold-press 0 175 XX (layer-while-held caps-layer))
+)
+
+;; capslockを押している間はcaps-layerを呼び出す。
+;; 変換でIME-ON、無変換でIME-OFFにするのはOS依存のIMEで処理するため、ここではパススルーする。
+(deflayermap (base)
+  caps @caps-mod
+  _ use-defsrc
+)
+
+;; ijklで矢印。uoでhome/end。
+;; mでdelete、semi-colonでbackspace
+;; dで戻る、fで進む。
+;; spaceでesc。
+(deflayer (caps-layer)
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y  home   up   end   p    [    ]    \
+  @caps-mod a    s   bck  fwd   g    h   left  down  right  bspc apos ret
+  lsft z    x    c    v    b    n    del    comm grtr slsh rsft
+  lctl lmet lalt           esc            ralt rmet rctl
+  left down up   rght
+  henk mhnk
+)

@@ -1,9 +1,67 @@
 # personal_settings
-personal settings of windows and linux.
+WindowsとLinux向けの個人用設定
+
+# Keymap
+## Option 1. 変換・無変換
+- 変換 + 無変換 : IME切替
+- 変換 + JKL, : 矢印
+- 変換 + M : Delete
+- 変換 + ； : Backspace
+- 無変換 + J : Home
+- 無変換 + L : End
+- 無変換 + Capslock : Esc
+
+Autohotkey
+- [autohotkey.ahk](autohotkey.ahk)
+- [autohotkey_v2.ahk](autohotkey_v2.ahk)
+
+google日本語
+- [google日本語keymap.txt](google日本語keymap.txt)
+- [google日本語romantable.txt](google日本語romantable.txt)
+
+kanata
+- [kanata.kbd](kanata.kbd)
+- [kanata.service](kanata.service)
+
+xkeysnail
+- [config.py](config.py)
+- [xkeysnail.service](xkeysnail.service)
+
+## Option 2. CapsLock
+- CapsLock + IJKL : 矢印
+- CapsLock + U : Home
+- CapsLock + O : End
+- CapsLock + M : Delete
+- CapsLock + ; : Backspace
+- CapsLock + D : Back
+- CapsLock + F : Forward
+- CapsLock + Space : Esc
+- Henkan : Hiragana
+- Muhenkan : Eisu
+
+Autohotkey
+- [autohotkey.ahk](autohotkey.ahk)
+- [autohotkey_v2.ahk](autohotkey_v2.ahk)
+
+google日本語
+- [google日本語keymap_capslock.txt](google日本語keymap_capslock.txt)
+- [google日本語romantable_capslock.txt](google日本語romantable_capslock.txt)
+
+kanata
+- [kanata_capslock.kbd](kanata_capslock.kbd)
+- [kanata_capslock.service](kanata_capslock.service)
+
+# Ubuntu 26.04
+Ubuntu 24.04と同様。
 
 # Ubuntu 24.04
 Ubuntu 22.04からアップグレード。
-Knataは1.11.0を使用。
+
+google日本語で  
+- キー設定でkeymap.txtをインポート  
+- ローマ字設定でromantable.txtをインポート  
+
+Kanataは1.11.0を使用。
 
 githubからのクローン
 ```bash
