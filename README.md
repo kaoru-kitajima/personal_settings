@@ -40,6 +40,8 @@ xkeysnail
 - Muhenkan : Eisu
 
 Autohotkey
+- [regedit_capslock.reg](regedit_capslock.reg)
+- [restore_capslock.reg](restore_capslock.reg)
 - [autohotkey.ahk](autohotkey.ahk)
 - [autohotkey_v2.ahk](autohotkey_v2.ahk)
 
@@ -61,7 +63,7 @@ google日本語で
 - キー設定でkeymap.txtをインポート  
 - ローマ字設定でromantable.txtをインポート  
 
-Kanataは1.11.0を使用。
+Kanataは1.12.0を使用。
 
 githubからのクローン
 ```bash
